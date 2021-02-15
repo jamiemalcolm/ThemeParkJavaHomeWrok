@@ -42,4 +42,12 @@ public class ThemeParkTest {
         themePark.addAttractionOrStall(dodgems);
         assertEquals(1, themePark.getNumAttrAndStalls());
     }
+
+    @Test
+    public void canAddStall(){
+        themePark.addAttractionOrStall(tobaccoStall);
+        assertEquals(1, themePark.getNumAttrAndStalls());
+
+    }
+
 }
