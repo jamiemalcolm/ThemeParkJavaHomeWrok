@@ -18,11 +18,11 @@ public class RollercoasterTest {
     @Before
     public void setUp() {
         rollerCoaster = new RollerCoaster("Blue Ridge", 10);
-        visitor1 = new Visitor(11, 144, 20.00);
-        visitor2 = new Visitor(12, 146, 20.00);
-        visitor3 = new Visitor(13, 123, 20.00);
-        visitor4 = new Visitor(14, 182, 20.00);
-        visitor5 = new Visitor(14, 202, 20.00);
+        visitor1 = new Visitor(11, 1.44, 20.00);
+        visitor2 = new Visitor(12, 1.46, 20.00);
+        visitor3 = new Visitor(13, 1.23, 20.00);
+        visitor4 = new Visitor(14, 1.82, 20.00);
+        visitor5 = new Visitor(14, 2.02, 20.00);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class RollercoasterTest {
     }
 
     @Test
-    public void canVisitAge(){
+    public void canVisit(){
         assertTrue(rollerCoaster.isAllowedTo(visitor4));
     }
 
