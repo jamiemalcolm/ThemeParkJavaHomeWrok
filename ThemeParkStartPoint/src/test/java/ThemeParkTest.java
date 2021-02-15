@@ -36,4 +36,10 @@ public class ThemeParkTest {
     public void newParkHasEmptyAL(){
         assertEquals(0, themePark.getNumAttrAndStalls());
     }
+
+    @Test
+    public void canAddAttraction(){
+        themePark.addAttractionOrStall(dodgems);
+        assertEquals(1, themePark.getNumAttrAndStalls());
+    }
 }
