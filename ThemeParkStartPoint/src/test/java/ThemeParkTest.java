@@ -67,4 +67,16 @@ public class ThemeParkTest {
         assertEquals(themePark.getAllReviewed(), expected);
     }
 
+    @Test
+    public void canRunVisitMethod(){
+        themePark.addAttractionOrStall(dodgems);
+        themePark.addAttractionOrStall(tobaccoStall);
+        themePark.addAttractionOrStall(rollerCoaster);
+        themePark.addAttractionOrStall(playground);
+
+        themePark.visit(visitor1, dodgems);
+
+        assertEquals(1, dodgems.getVisitCount());
+        assertEquals(1, visitor1.getNumOfAttrVisited());
+    }
 }

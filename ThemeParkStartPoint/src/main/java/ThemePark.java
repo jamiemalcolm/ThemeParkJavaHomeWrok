@@ -1,5 +1,7 @@
 import attractions.Attraction;
+import attractions.Dodgems;
 import behaviours.IReviewed;
+import people.Visitor;
 
 import java.util.ArrayList;
 
@@ -27,5 +29,10 @@ public class ThemePark {
 
     public ArrayList<IReviewed> getAllReviewed(){
         return this.stallsAndAttractions;
+    }
+
+    public void visit(Visitor visitor, Attraction attraction) {
+        visitor.visited(attraction);
+        attraction.addToVisitCount();
     }
 }
