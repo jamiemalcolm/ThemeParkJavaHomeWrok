@@ -93,4 +93,12 @@ public class ThemeParkTest {
         themePark.addAttractionOrStall(playground);
         assertEquals(4, themePark.ratingsMapSize());
     }
+
+    @Test
+    public void canGetAllAllowedForVisitor(){
+        ArrayList<IReviewed> allowed = getAllAllowedFor(visitor2);
+        int expected = allowed.size();
+        assertEquals(allowed.size(), 3);
+
+    }
 }

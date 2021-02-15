@@ -1,6 +1,6 @@
 import attractions.Attraction;
-import attractions.Dodgems;
 import behaviours.IReviewed;
+import behaviours.ISecurity;
 import people.Visitor;
 
 import java.util.ArrayList;
@@ -46,5 +46,14 @@ public class ThemePark {
 
     public HashMap<String, Integer> getRatingsMap(){
         return this.ratingsMap;
+    }
+
+    public ArrayList<IReviewed> getAllAllowedFor(Visitor visitor) {
+        ArrayList<IReviewed> allowedForVisitor = new ArrayList<>();
+        for(IReviewed attrOrStall : this.stallsAndAttractions){
+            attrOrStall.getClass(ISecurity);
+
+
+        }
     }
 }
