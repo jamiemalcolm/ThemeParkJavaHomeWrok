@@ -85,11 +85,12 @@ public class ThemeParkTest {
         assertEquals(0, themePark.ratingsMapSize());
     }
 
-//    @Test
-//    public void hasHashMapWithValues(){
-//        themePark.addAttractionOrStall(dodgems);
-//        themePark.addAttractionOrStall(tobaccoStall);
-//        themePark.addAttractionOrStall(rollerCoaster);
-//        themePark.addAttractionOrStall(playground);
-//    }
+    @Test
+    public void hasHashMapWithValues(){
+        themePark.addAttractionOrStall(dodgems);
+        themePark.addAttractionOrStall(tobaccoStall);
+        themePark.addAttractionOrStall(rollerCoaster);
+        themePark.addAttractionOrStall(playground);
+        assertEquals(4, themePark.ratingsMapSize());
+    }
 }

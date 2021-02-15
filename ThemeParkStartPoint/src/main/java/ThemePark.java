@@ -20,6 +20,7 @@ public class ThemePark {
 
     public void addAttractionOrStall(IReviewed item){
         this.stallsAndAttractions.add(item);
+        this.ratingsMap.put(item.getName(), item.getRating());
     }
 
     public String getName() {
