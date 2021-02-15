@@ -39,5 +39,9 @@ public class PlaygroundTest {
     public void canVisit(){
         assertTrue(playground.isAllowedTo(visitor1));
     }
+    @Test
+    public void canVisitLimit(){
+        assertTrue(playground.isAllowedTo(visitor2));
+    }
 
 }
