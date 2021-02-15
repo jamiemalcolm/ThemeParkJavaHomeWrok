@@ -1,13 +1,16 @@
 import attractions.Dodgems;
 import attractions.Playground;
 import attractions.RollerCoaster;
+import behaviours.IReviewed;
 import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
 import stalls.ParkingSpot;
 import stalls.TobaccoStall;
 
-import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+
+import static org.junit.Assert.*;
 
 public class ThemeParkTest {
 
@@ -47,7 +50,21 @@ public class ThemeParkTest {
     public void canAddStall(){
         themePark.addAttractionOrStall(tobaccoStall);
         assertEquals(1, themePark.getNumAttrAndStalls());
+    }
 
+    @Test
+    public void canGetAllinList(){
+        themePark.addAttractionOrStall(dodgems);
+        themePark.addAttractionOrStall(tobaccoStall);
+        themePark.addAttractionOrStall(rollerCoaster);
+        themePark.addAttractionOrStall(playground);
+
+        ArrayList<IReviewed> expected = new ArrayList<>();
+        expected.add(dodgems);
+        expected.add(tobaccoStall);
+        expected.add(rollerCoaster);
+        expected.add(playground);
+        assertEquals(themePark.getAllReviewed(), expected);
     }
 
 }
