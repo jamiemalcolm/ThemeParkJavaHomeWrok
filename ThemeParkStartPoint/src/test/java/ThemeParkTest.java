@@ -79,4 +79,17 @@ public class ThemeParkTest {
         assertEquals(1, dodgems.getVisitCount());
         assertEquals(1, visitor1.getNumOfAttrVisited());
     }
+
+    @Test
+    public void hasHashMap(){
+        assertEquals(0, themePark.ratingsMapSize());
+    }
+
+//    @Test
+//    public void hasHashMapWithValues(){
+//        themePark.addAttractionOrStall(dodgems);
+//        themePark.addAttractionOrStall(tobaccoStall);
+//        themePark.addAttractionOrStall(rollerCoaster);
+//        themePark.addAttractionOrStall(playground);
+//    }
 }
