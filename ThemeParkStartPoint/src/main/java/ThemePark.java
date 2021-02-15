@@ -51,9 +51,10 @@ public class ThemePark {
     public ArrayList<IReviewed> getAllAllowedFor(Visitor visitor) {
         ArrayList<IReviewed> allowedForVisitor = new ArrayList<>();
         for(IReviewed attrOrStall : this.stallsAndAttractions){
-            attrOrStall.getClass(ISecurity);
-
-
+            if(attrOrStall.isAllowedTo(visitor)){
+                allowedForVisitor.add(attrOrStall);
+            }
         }
+        return allowedForVisitor;
     }
 }

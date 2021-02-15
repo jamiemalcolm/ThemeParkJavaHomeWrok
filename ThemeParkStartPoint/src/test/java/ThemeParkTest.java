@@ -96,9 +96,14 @@ public class ThemeParkTest {
 
     @Test
     public void canGetAllAllowedForVisitor(){
-        ArrayList<IReviewed> allowed = getAllAllowedFor(visitor2);
+        themePark.addAttractionOrStall(dodgems);
+        themePark.addAttractionOrStall(tobaccoStall);
+        themePark.addAttractionOrStall(rollerCoaster);
+        themePark.addAttractionOrStall(playground);
+
+        ArrayList<IReviewed> allowed = themePark.getAllAllowedFor(visitor2);
         int expected = allowed.size();
-        assertEquals(allowed.size(), 3);
+        assertEquals(expected, 3);
 
     }
 }
